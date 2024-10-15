@@ -14,7 +14,9 @@ body {
 [v-cloak] {
     display: none;
 }
-
+video.normal{
+    position: absolute;
+}
 .videoArea {
     height: 100vh;
     display: flex;
