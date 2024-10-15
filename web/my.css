@@ -14,8 +14,10 @@ body {
 [v-cloak] {
     display: none;
 }
-video.normal{
+video.loop{
     position: absolute;
+    left: 0;
+    top: 0;
 }
 .videoArea {
     height: 100vh;
@@ -102,6 +104,21 @@ video.normal{
     display: block;
     animation: flash12 .4s infinite;
 }
+.videoArea .videoK .close {
+    width: 2.69%;
+    position: absolute;
+    left: 95.3%;
+    bottom: 91.65%;
+    z-index: 9;
+}
+
+.videoArea .videoK .close i {
+    padding-bottom: 100%;
+    cursor: pointer;
+    display: block;
+    animation: flash12 .4s infinite;
+}
+
 
 
 @keyframes flash12 {
