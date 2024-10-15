@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>大尾天堂M｜天堂M私服｜大尾遊戲</title>
+  <meta name="keywords"
+        content="大尾,天堂私服,天堂M私服,天堂W私服,天堂2M私服,楓之谷私服,楓之谷M私服,大尾天堂M,天堂M,大尾天堂W,天堂W,天堂,天堂2M, 楓之谷M,私服, daweisf, dawei168"/>
+  <link rel="canonical"
+        href="https://www.daweisf.com/ttm/info/1.html"/>
+  <meta property="og:locale" content="zh_TW"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="大尾天堂M｜天堂M私服｜大尾遊戲"/>
+  <meta property="og:url"
+        content="https://www.daweisf.com/ttm/info/1.html"/>
+  <meta property="og:site_name" content="大尾天堂M｜天堂M私服｜大尾遊戲"/>
+  <meta property="article:publisher" content="https://www.facebook.com/daweisf"/>
+  <meta property="article:tag" content="大尾天堂M｜天堂M私服｜大尾遊戲"/>
+  <meta property="article:section" content="未分類"/>
+  <meta property="og:image" content="https://upload.cc/i1/2024/09/05/NZXdsp.png"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="大尾天堂M｜天堂M私服｜大尾遊戲"/>
+  <meta name="twitter:image" content="https://upload.cc/i1/2024/09/05/NZXdsp.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+  <link href="my.css?v=1.003" rel="stylesheet" type="text/css"/>
+  <link href="mobile.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="app">
+  <div class="videoArea">
+    <div class="videoK" :style="myStyle">
+      <div data-step="1" v-show="step==1">
+        <video data-src="img/video/main.mp4" autoplay loop muted playsinline v-show="!haveConfirm"></video>
+        <video id="confirmVideo" data-src="img/video/confirm.mp4" loop playsinline v-show="haveConfirm"></video>
+      </div>
+      <div data-step="2" v-show="step==2">
+        <div v-show="achieve==1" achieve="1">
+          <video class="normal" data-src="img/video/1.藍1.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/1.1藍01循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==2" achieve="2">
+          <video class="normal" data-src="img/video/2.紅1.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/2.1紅循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==3" achieve="3">
+          <video class="normal" data-src="img/video/3.全綠.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/3.全綠01循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==4" achieve="4">
+          <video class="normal" data-src="img/video/4.藍2.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/4.2藍循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==5" achieve="5">
+          <video class="normal" data-src="img/video/5.出紫.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/5.出紫循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==6" achieve="6">
+          <video class="normal" data-src="img/video/6.紅1藍1.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/6.1紅1藍循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==7" achieve="7">
+          <video class="normal" data-src="img/video/7.藍1.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/7.1藍循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==8" achieve="8">
+          <video class="normal" data-src="img/video/8.全綠02.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/8.全綠02循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==9" achieve="9">
+          <video class="normal" data-src="img/video/9.紅2.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/9.2紅循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+        <div v-show="achieve==10" achieve="10">
+          <video class="normal" data-src="img/video/10.3藍.mp4" playsinline v-show="!finish" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/10.3藍循環.mp4" loop playsinline v-show="finish"></video>
+        </div>
+      </div>
+      <div class="loadingN"></div>
+      <div class="bk"></div>
+      <div class="card" v-if="!haveConfirm&&step==1&&haveLoad" @click="playConfirm"><i></i></div>
+      <div class="confirm" v-else-if="haveConfirm&&step==1&&haveLoad" @click="confirm"><i></i></div>
+      <div class="repeat" v-else-if="achieve>0&&step==2&&finish" @click="repeat"><i></i></div>
+    </div>
+    <img src="img/btn-change1.png" class="zd" @click="closeAd=true" v-cloak v-if="closeAd==false">
+    <img src="img/btn-change2.png" class="zd" @click="closeAd=false" v-else>
+    <div class="floatBottom" :class="{close:closeAd,open:!closeAd}">
+      <a target="_blank" href="https://www.daweisf.com/index/user/gift_pack/game_id/2.html" class="lq"><i></i></a>
+      <img src="img/bottom.jpg" class="ad">
+    </div>
+    <div class="floatBtns">
+      <img src="img/logoDW.png" class="logoimg">
+      <a target="_blank" href="https://www.daweisf.com/download/2/android.html"><img src="img/down_android.png"></a>
+      <a target="_blank" href="https://www.daweisf.com/download/2/ios.html"><img src="img/down_ios.png?v=0.02"></a>
+      <a target="_blank" href="https://www.daweisf.com/download/2/yun.html"><img src="img/down_mobile.png"></a>
+    </div>
+    <div class="floatDiv">
+      <ul class="btns">
+        <li><a target="_blank" href="https://www.daweisf.com/ttm/info/1.html"><img src="img/ico_web.png"></a></li>
+        <li><a target="_blank" href="https://lin.ee/4HRKoTB"><img src="img/ico_line@.png"></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/daweisf"><img src="img/ico_facebook.png"></a></li>
+        <li><a target="_blank" href="https://www.youtube.com/@%E9%81%8A%E6%88%B2%E6%84%9B%E5%A5%BD%E8%80%85m"><img
+                src="img/ico_youtube.png"></a></li>
+        <li><a target="_blank"
+               href="https://line.me/ti/g2/FGOz5QsP7POJqoK1ofhQ2A9X9Tx99mE9tQ_n0w?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default"><img
+                src="img/ico_linesq.png?v=1"></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="vue.min.js"></script>
+
+<script>
+new Vue({
+    el: '.app',
+    data: {
+        sw: 0,
+        sh: 0,
+        closeAd: false,
+        step: 1,
+        haveConfirm: false,
+        achieve: 0,//获得的序号
+        finish: false,
+        haveLoad: false
+    },
+    mounted() {
+        this.sw = window.innerWidth
+        this.sh = window.innerHeight
+        window.addEventListener('resize', () => {
+            this.sw = window.innerWidth
+            this.sh = window.innerHeight
+        })
+        //这样就可以第一幕的视频文件不会一直被加载
+        let curNum = 0
+        let div = document.querySelector('div[data-step="' + this.step + '"]')
+        let svideos = div.querySelectorAll('video')
+        svideos.forEach((el) => {
+            if (el.getAttribute('src') == null) {
+                el.setAttribute('src', el.getAttribute('data-src'))
+            }
+            el.addEventListener('canplay', () => {
+                curNum += 1
+                if (curNum >= svideos.length) {
+                    this.haveLoad = true
+                }
+            })
+
+        })
+    },
+    watch: {
+        achieve: {
+            immediate: false,
+            handler(value) {
+                this.haveLoad = false
+                let video, videos, svideos, curNum = 0;
+                let div = document.querySelector('div[achieve="' + value + '"]')
+                svideos = div.querySelectorAll('video')
+                svideos.forEach((el) => {
+                    if (el.getAttribute('src') == null) {
+                        el.setAttribute('src', el.getAttribute('data-src'))
+                    }
+                    el.addEventListener('canplay', () => {
+                        curNum += 1
+                        if (curNum >= svideos.length) {
+                            this.haveLoad = true
+                        }
+                    })
+                })
+
+                videos = document.querySelectorAll('video')
+                videos.forEach((el) => {
+                    el.pause()
+                })
+
+                video = div.querySelector('video[class="normal"]')
+
+                video.currentTime = 0
+                video.play()
+
+            }
+        },
+    },
+    computed: {
+        myStyle() {
+            let vw = 1784
+            let vh = 1004
+            let bili = vh / vw
+            let sw = this.sw
+            let sh = this.sh
+
+            if (sw > vw) {
+                if (sh > vh) {
+                    return 'width:' + sw + 'px;height:' + sh + 'px'
+                    //return 'width:' + vw + 'px;height:' + vh + 'px'
+                } else {
+                    return 'width:' + sh / bili + 'px;height:' + sh + 'px'
+                }
+            } else {
+                if (sh > vh) {
+                    return 'width:' + sw + 'px;height:' + sw * bili + 'px'
+                } else {
+                    let bilis = sh / sw
+                    if (bili > bilis) {
+                        return 'width:' + sh / bili + 'px;height:' + sh + 'px'
+                    } else {
+                        return 'width:' + sw + 'px;height:' + sw * bili + 'px'
+                    }
+                }
+            }
+        }
+    },
+    methods: {
+        playConfirm() {
+            this.haveConfirm = true
+            let video = document.querySelector('#confirmVideo')
+            video.play()
+        },
+        confirm() {
+            this.step = 2
+            this.achieve += 1
+            this.haveConfirm=false
+        },
+        ok() {
+            this.finish = true
+            let div = document.querySelector('div[data-step="' + this.step + '"]')
+            let ldiv = div.querySelector('div[achieve="' + this.achieve + '"]')
+            let video = ldiv.querySelector('video[class="loop"]')
+            video.play()
+
+        },
+        repeat(){
+            this.finish=false
+            this.achieve+=1
+            if(this.achieve>10){
+                this.achieve=1
+            }
+
+        }
+    }
+})
+</script>
+</body>
+
+</html>
+
