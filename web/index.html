@@ -36,44 +36,44 @@
       </div>
       <div data-step="2" v-show="step==2">
         <div v-show="achieve==1" achieve="1">
-          <video class="normal" data-src="img/video/1.藍1.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/1.1藍01循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/1.藍1.mp4" playsinline v-show="!finish&&achieve==1" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/1.1藍01循環.mp4" loop playsinline v-show="finish&&achieve==1"></video>
         </div>
         <div v-show="achieve==2" achieve="2">
-          <video class="normal" data-src="img/video/2.紅1.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/2.1紅循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/2.紅1.mp4" playsinline v-show="!finish&&achieve==2" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/2.1紅循環.mp4" loop playsinline v-show="finish&&achieve==2"></video>
         </div>
         <div v-show="achieve==3" achieve="3">
-          <video class="normal" data-src="img/video/3.全綠.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/3.全綠01循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/3.全綠.mp4" playsinline v-show="!finish&&achieve==3" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/3.全綠01循環.mp4" loop playsinline v-show="finish&&achieve==3"></video>
         </div>
         <div v-show="achieve==4" achieve="4">
-          <video class="normal" data-src="img/video/4.藍2.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/4.2藍循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/4.藍2.mp4" playsinline v-show="!finish&&achieve==4" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/4.2藍循環.mp4" loop playsinline v-show="finish&&achieve==4"></video>
         </div>
         <div v-show="achieve==5" achieve="5">
-          <video class="normal" data-src="img/video/5.出紫.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/5.出紫循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/5.出紫.mp4" playsinline v-show="!finish&&achieve==5" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/5.出紫循環.mp4" loop playsinline v-show="finish&&achieve==5"></video>
         </div>
         <div v-show="achieve==6" achieve="6">
-          <video class="normal" data-src="img/video/6.紅1藍1.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/6.1紅1藍循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/6.紅1藍1.mp4" playsinline v-show="!finish&&achieve==6" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/6.1紅1藍循環.mp4" loop playsinline v-show="finish&&achieve==6"></video>
         </div>
         <div v-show="achieve==7" achieve="7">
-          <video class="normal" data-src="img/video/7.藍1.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/7.1藍循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/7.藍1.mp4" playsinline v-show="!finish&&achieve==7" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/7.1藍循環.mp4" loop playsinline v-show="finish&&achieve==7"></video>
         </div>
         <div v-show="achieve==8" achieve="8">
-          <video class="normal" data-src="img/video/8.全綠02.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/8.全綠02循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/8.全綠02.mp4" playsinline v-show="!finish&&achieve==8" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/8.全綠02循環.mp4" loop playsinline v-show="finish&&achieve==8"></video>
         </div>
         <div v-show="achieve==9" achieve="9">
-          <video class="normal" data-src="img/video/9.紅2.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/9.2紅循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/9.紅2.mp4" playsinline v-show="!finish&&achieve==9" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/9.2紅循環.mp4" loop playsinline v-show="finish&&achieve==9"></video>
         </div>
         <div v-show="achieve==10" achieve="10">
-          <video class="normal" data-src="img/video/10.3藍.mp4" playsinline v-show="!finish" @ended="ok"></video>
-          <video class="loop" data-src="img/video/循環/10.3藍循環.mp4" loop playsinline v-show="finish"></video>
+          <video class="normal" data-src="img/video/10.3藍.mp4" playsinline v-show="!finish&&achieve==10" @ended="ok"></video>
+          <video class="loop" data-src="img/video/循環/10.3藍循環.mp4" loop playsinline v-show="finish&&achieve==10"></video>
         </div>
       </div>
       <div class="loadingN"></div>
