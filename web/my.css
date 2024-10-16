@@ -14,11 +14,11 @@ body {
 [v-cloak] {
     display: none;
 }
-video.loop{
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+/*video.loop{*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*}*/
 .videoArea {
     height: 100vh;
     display: flex;
